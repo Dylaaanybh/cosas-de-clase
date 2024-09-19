@@ -18,5 +18,3 @@ array_search("papaya", $fruits);
 echo array_search("sandiá", $fruits2);
 
 echo array_search("manzana", $fruits);
-
-array_
