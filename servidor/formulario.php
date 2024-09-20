@@ -40,6 +40,25 @@
                     <label for="fullstack">Fullstack</label>
                 </p>
                 <p>
+                    <label for="subject">¿Qué modulo te gusta más?</label>
+                    <?php require_once ("subjectData.php"); ?>
+                    <select name="subject" id="subject">
+                        <?php foreach($subjects as $key => $value){ ?>
+                            <option value="<?= $key ?>"><?= $value ?></option>
+                        <?php } ?>
+                    </select>
+                </p>
+                <p>
+                    <label for="company">¿En qué empresa te gustaría hacer las prácticas?</label>
+                    <select name="companiesId[]" id="company" multiple>
+                    <?php require_once ("companies.php"); 
+                    for($i = 0; $i < count($companies); $i++){
+                        printf("<option value='%s'>%s</option>", $i, $companies[$i]);
+                    }
+                    ?>
+                    </select>
+                </p>
+                <p>
                     <button type="submit">Enviar</button>
                 </p>    
             </form>
