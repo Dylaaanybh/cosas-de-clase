@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: inline;
+    text-align: center;
+    margin: 100px;
+}
+.exercise_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.5px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    padding: 10px 7.5px;
+    transition: all 0.5s;
+    gap: 5px;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+}
+.exercise_container:hover {
+    width: 100%;
+    padding: 15px 10px;
+}
+.exercise_container button{
+    padding: 10px 25px;
+}
