@@ -59,7 +59,17 @@
                     </select>
                 </p>
                 <p>
-                    <button type="submit">Enviar</button>
+                    <label for="county">¿En que provincia vives?</label>
+                    <select name="county" id="county">
+                    <?php require_once ("datos_provincias.php");
+                    for($i = 0 ; $i < count($counties) ; $i++){
+                        printf("<option value= '%s'>%s</option>", $i, $counties[$i]);
+                    }
+                    ?>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit" value="send">Enviar</button>
                 </p>    
             </form>
     </div>
