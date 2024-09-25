@@ -9,7 +9,7 @@
 <body>
     <div>
         <h1>Formulario que envia datos a una pagina php</h1>
-            <form action="processData.php" method="post">
+            <form action="processData.php" method="post" name="processData">
                 <p>
                     <label for="name">Nombre</label>
                     <input type="text" id="name" name="name" placeholder="Escribe tu nombre">
@@ -60,12 +60,33 @@
                     </select>
                 </p>
                 <p>
+                    <button type="submit" value="send">Enviar</button>
+                </p>
+            </form>
+
+            <form action="provinces.php" method="get" name="provinces">
+                <p>
                     <label for="county">¿En que provincia vives?</label>
                     <select name="county" id="county">
-                    <?php require_once ("datos_provincias.php");
+                        <?php require_once ("datos_provincias.php");
                     for($i = 0 ; $i < count($counties) ; $i++){
                         printf("<option value= '%s'>%s</option>", $i, $counties[$i]);
                     }
+                    ?>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit" value="send">Enviar</button>
+                </p>
+            </form>
+            <form action="cities.php" method="get" name="cities">
+                <p>
+                    <label for="country">¿En que pais vives?</label>
+                    <select name="country" id="country">
+                    <?php require_once ("datos_ciudades.php");
+                        foreach($countries as $key => $value){
+                            printf("<option>%s</option>", $key);
+                        }
                     ?>
                     </select>
                 </p>
