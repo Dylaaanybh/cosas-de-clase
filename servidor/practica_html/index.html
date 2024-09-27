@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio en grupo</h1>
+    <form action="processData.php" method="post">
+        <p>
+            <textarea name="name">
+
+            </textarea>
+        </p>
+        <p>
+            <label for="typeColor">Color</label>
+            <input type="color" id="typeColor" name="typeColor">
+        </p>
+        <p>
+            <label for="sizeLetter">Escoge el tamaño de letra</label>
+            <input type="range" id="sizeLetter" name="sizeLetter" min="8" max="64" oninput="output.value = sizeLetter.value">
+            <output for="sizeLetter" id="output"></output>
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+        </p>
+    </form>
+</body>
+</html>

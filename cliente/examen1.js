@@ -17,6 +17,7 @@ function changeFtoC(array){
 }
 console.log(changeFtoC([68, 50, 46.4, 39, 90]));
 console.log(changeFtoC([20, 0, -10]));
+console.log(changeFtoC([]));
 
 // Ejercicio 2: 
 // ¿Temperatura por debajo de 0ºC?
