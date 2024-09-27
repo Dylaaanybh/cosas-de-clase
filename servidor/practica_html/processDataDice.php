@@ -10,7 +10,7 @@
     <p>
         <?php
             $random = rand(1,6);
-            printf("");
+            printf("<img src='dice%d.png' alt='dice%d'>", $random, $random);
         ?>
     </p>
 </body>
