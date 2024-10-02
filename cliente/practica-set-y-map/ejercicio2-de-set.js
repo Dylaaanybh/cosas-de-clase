@@ -6,12 +6,10 @@ function getRandomIntInclusive(min, max, num){
     let ranNum = Math.floor(Math.random() * (max - min + 1)) + min;
     let set = new Set();
     while(set.size < num){
-        if(set.has(ranNum)){
-            ranNum = Math.floor(Math.random() * (max - min + 1)) + min;
-        }else{
-            set.add(ranNum);
-        }
+        set.add(ranNum);
+        ranNum = Math.floor(Math.random() * (max - min + 1)) + min;
     }
+    return [...set];
 }
 
 console.log(getRandomIntInclusive(1, 10, 5));
